@@ -218,7 +218,7 @@ Blockly.Toolbox.prototype.position = function() {
   if (this.horizontalLayout_) {
     treeDiv.style.left = '0';
     treeDiv.style.height = 'auto';
-    treeDiv.style.width = svgSize.width + 'px';
+    // treeDiv.style.width = svgSize.width + 'px';
     this.height = treeDiv.offsetHeight;
     if (this.toolboxPosition == Blockly.TOOLBOX_AT_TOP) {  // Top
       treeDiv.style.top = '0';
@@ -232,7 +232,7 @@ Blockly.Toolbox.prototype.position = function() {
       treeDiv.style.left = '0';
     }
     treeDiv.style.height = '100%';
-    treeDiv.style.width = this.width + 'px';
+    // treeDiv.style.width = this.width + 'px';
   }
   this.flyout_.position();
 };
@@ -335,7 +335,7 @@ Blockly.Toolbox.prototype.setSelectedItem = function(item) {
   this.selectedItem_ = item;
   if (this.selectedItem_ != null) {
     this.selectedItem_.setSelected(true);
-    // this.selectedItem_.bubble_.style.backgroundImage = this.selectedItem_.bgSelected_;
+    //this.selectedItem_.bubble_.style.backgroundImage = this.selectedItem_.bgSelected_;
     this.flyout_.show(item.getContents());
     this.flyout_.scrollToStart();
   }
@@ -351,6 +351,10 @@ Blockly.Toolbox.prototype.setSelectedItemFactory = function(item) {
   return function(event) {
     this.setSelectedItem(selectedItem);
     event.stopPropagation();
+    //隐藏输入控件
+    Blockly.DropDownDiv.hide();
+    Blockly.WidgetDiv.hide();
+
     Blockly.Touch.clearTouchIdentifier();
   };
 };
@@ -489,11 +493,16 @@ Blockly.Toolbox.Category.prototype.createDom = function() {
   this.bubble_ = goog.dom.createDom('div', {
     'class': (toolbox.RTL) ? 'scratchCategoryItemBubbleRTL' :
     'scratchCategoryItemBubbleLTR'});
-  //this.bubble_.style.backgroundColor = this.colour_;
+
+  // this.item_.style.borderLeftColor = this.colour_;
+  // this.item_.style.borderLeftStyle = 'solid';
+  // this.item_.style.borderLeftWidth = '8px';
+
   this.bubble_.style.backgroundImage = this.bg_;
   this.item_.appendChild(this.bubble_);
   this.parentHtml_.appendChild(this.item_);
   var item = this.item_;
+  var myself = this;
   Blockly.bindEvent_(this.item_, 'click', toolbox, toolbox.setSelectedItemFactory(this));
 };
 
@@ -506,7 +515,6 @@ Blockly.Toolbox.Category.prototype.setSelected = function(selected) {
     this.item_.className = 'scratchCategoryMenuItem categorySelected';
     this.item_.style.backgroundColor = this.colour_;
 
-    console.log(this);
   } else {
     this.item_.className = 'scratchCategoryMenuItem';
     this.item_.style.backgroundColor = '';

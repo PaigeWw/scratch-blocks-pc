@@ -203,23 +203,35 @@ Blockly.Scrollbar = function(workspace, horizontal, opt_pair, opt_class) {
   this.position_ = new goog.math.Coordinate(0, 0);
 
   if (horizontal) {
+    // this.svgBackground_.setAttribute('height',
+    //     Blockly.Scrollbar.scrollbarThickness);
+    // this.outerSvg_.setAttribute('height',
+    //       Blockly.Scrollbar.scrollbarThickness);
+    // this.svgHandle_.setAttribute('height',
+    //     Blockly.Scrollbar.scrollbarThickness - 5);
     this.svgBackground_.setAttribute('height',
-        Blockly.Scrollbar.scrollbarThickness);
+      0);
     this.outerSvg_.setAttribute('height',
-          Blockly.Scrollbar.scrollbarThickness);
+      0);
     this.svgHandle_.setAttribute('height',
-        Blockly.Scrollbar.scrollbarThickness - 5);
+      0);
     this.svgHandle_.setAttribute('y', 2.5);
 
     this.lengthAttribute_ = 'width';
     this.positionAttribute_ = 'x';
   } else {
+    // this.svgBackground_.setAttribute('width',
+    //   Blockly.Scrollbar.scrollbarThickness);
+    // this.outerSvg_.setAttribute('width',
+    //   Blockly.Scrollbar.scrollbarThickness);
+    // this.svgHandle_.setAttribute('width',
+    //   Blockly.Scrollbar.scrollbarThickness - 5);
     this.svgBackground_.setAttribute('width',
-        Blockly.Scrollbar.scrollbarThickness);
+      0);
     this.outerSvg_.setAttribute('width',
-       Blockly.Scrollbar.scrollbarThickness);
+      0);
     this.svgHandle_.setAttribute('width',
-        Blockly.Scrollbar.scrollbarThickness - 5);
+      0);
     this.svgHandle_.setAttribute('x', 2.5);
 
     this.lengthAttribute_ = 'height';

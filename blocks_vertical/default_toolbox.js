@@ -139,6 +139,9 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
       '</block>'+
       '<block type="event_whenthisspriteclicked" id="event_whenthisspriteclicked"></block>'+
       '<block type="event_whenbackdropswitchesto" id="event_whenbackdropswitchesto">'+
+          '<value name="BACKDROP">'+
+              '<shadow type="event_backdrops"></shadow>'+
+          '</value>'+
       '</block>'+
       '<block type="event_whengreaterthan" id="event_whengreaterthan">'+
           '<value name="VALUE">'+
@@ -148,6 +151,9 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
           '</value>'+
       '</block>'+
       '<block type="event_whenbroadcastreceived" id="event_whenbroadcastreceived">'+
+          '<value name="BROADCAST_OPTION">'+
+              '<shadow type="event_broadcast_menu"></shadow>'+
+          '</value>'+
       '</block>'+
       '<block type="event_broadcast" id="event_broadcast">'+
           '<value name="BROADCAST_OPTION">'+

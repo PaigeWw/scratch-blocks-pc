@@ -384,6 +384,14 @@ Blockly.FieldDropdown.prototype.getValue = function() {
  * @param {string} newValue New value to set.
  */
 Blockly.FieldDropdown.prototype.setValue = function(newValue) {
+  if(newValue == Blockly.Events.MSG_CREATE){
+    Blockly.Events.fire(new Blockly.Events.MsgCreate({
+      'name': 'msg_create',
+      'type': 'msg_create',
+      'block': this.sourceBlock_
+    }));
+    return;
+  }
   if (newValue === null || newValue === this.value_) {
     return;  // No change if null.
   }

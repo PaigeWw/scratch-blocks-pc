@@ -78,7 +78,7 @@ Blockly.VerticalFlyout.prototype.autoClose = false;
  * The width of the flyout, if not otherwise specified.
  * @type {number}
  */
-Blockly.VerticalFlyout.prototype.DEFAULT_WIDTH = 330;
+Blockly.VerticalFlyout.prototype.DEFAULT_WIDTH = 300;
 
 /**
  * Size of a checkbox next to a variable reporter.
@@ -503,6 +503,7 @@ Blockly.VerticalFlyout.prototype.createRect_ = function(block, x, y,
  */
 Blockly.VerticalFlyout.prototype.createCheckbox_ = function(block, cursorX,
      cursorY, blockHW) {
+  console.log('createCheckbox_');
   var checkboxState = Blockly.VerticalFlyout.getCheckboxState(block.id);
   var svgRoot = block.getSvgRoot();
   var extraSpace = this.CHECKBOX_SIZE + this.CHECKBOX_MARGIN;
@@ -713,6 +714,13 @@ Blockly.VerticalFlyout.prototype.reflowInternal_ = function(/* blocks */) {
  * @return {boolean} Whether the block is checked.
  * @public
  */
-Blockly.VerticalFlyout.getCheckboxState = function(/* blockId */) {
+Blockly.VerticalFlyout.getCheckboxState = function(blockId) {
+  if(!this.checkboxes_) return false;
+  for (var i = 0; i < this.checkboxes_.length; i++) {
+    var checkboxObj = this.checkboxes_[i];
+    if (checkboxObj.block.id === blockId) {
+      return checkboxObj.clicked;
+    }
+  }
   return false;
 };

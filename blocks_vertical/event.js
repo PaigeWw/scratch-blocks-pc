@@ -78,17 +78,42 @@ Blockly.Blocks['event_whenbroadcastreceived'] = {
       "message0": "当接收到消息 %1",
       "args0": [
         {
-          "type": "field_dropdown",
+          "type": "input_value",
           "name": "BROADCAST_OPTION",
           "options": [
-            ['message1', 'message1'],
-            ['message2', 'message2'],
-            ['new message', 'new message']
+            ['消息1', 'message1'],
+            ['消息2', 'message2'],
+            // ['new message', 'new message']
           ]
         }
       ],
       "category": Blockly.Categories.event,
       "extensions": ["colours_event", "shape_hat"]
+    });
+  }
+};
+Blockly.Blocks['event_backdrops'] = {
+  /**
+   * Backdrop list
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "id": "event_backdrops",
+      "message0": "%1",
+      "args0": [
+        {
+          "type": "field_dropdown",
+          "name": "BACKDROP",
+          "options": [
+            ['backdrop1', 'BACKDROP1']
+          ]
+        }
+      ],
+      "colour": Blockly.Colours.event.secondary,
+      "colourSecondary": Blockly.Colours.event.secondary,
+      "colourTertiary": Blockly.Colours.event.tertiary,
+      "extensions": ["output_string"]
     });
   }
 };
@@ -103,11 +128,8 @@ Blockly.Blocks['event_whenbackdropswitchesto'] = {
       "message0": "当 背景 切换到 %1",
       "args0": [
         {
-          "type": "field_dropdown",
-          "name": "BACKDROP",
-          "options": [
-              ['backdrop1', 'BACKDROP1']
-          ]
+          "type": "input_value",
+          "name": "BACKDROP"
         }
       ],
       "category": Blockly.Categories.event,
@@ -129,7 +151,7 @@ Blockly.Blocks['event_whengreaterthan'] = {
           "type": "field_dropdown",
           "name": "WHENGREATERTHANMENU",
           "options": [
-              ['计时器', 'TIMER']
+            ['计时器', 'TIMER']
           ]
         },
         {
@@ -159,7 +181,7 @@ Blockly.Blocks['event_broadcast_menu'] = {
             "options": [
               ['消息1', 'message1'],
               ['消息2', 'message2'],
-              ['new message', 'new message']
+              // ['new message', 'new message']
             ]
           }
         ],

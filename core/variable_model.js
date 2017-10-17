@@ -44,6 +44,7 @@ goog.require('goog.string');
  * @constructor
  */
 Blockly.VariableModel = function(workspace, name, opt_type, opt_id) {
+
   /**
    * The workspace the variable is in.
    * @type {!Blockly.Workspace}

@@ -211,7 +211,7 @@ Blockly.FieldNumber.prototype.position_ = function() {
   var secondaryX = primaryX;
   var secondaryY = position.y - (Blockly.BlockSvg.MIN_BLOCK_Y * scale) -
       (Blockly.BlockSvg.FIELD_Y_OFFSET * scale);
-
+  // var secondaryY = position.y - (Blockly.BlockSvg.MIN_BLOCK_Y * scale);
   Blockly.DropDownDiv.setBoundsElement(
       this.sourceBlock_.workspace.getParentSvg().parentNode);
   Blockly.DropDownDiv.show(this, primaryX, primaryY, secondaryX, secondaryY,

@@ -61,7 +61,6 @@ Blockly.ContextMenu.show = function(e, options, rtl) {
     Blockly.ContextMenu.hide();
     return;
   }
-  console.log(options);
   var menu = Blockly.ContextMenu.populate_(options, rtl);
 
   goog.events.listen(menu, goog.ui.Component.EventType.ACTION,

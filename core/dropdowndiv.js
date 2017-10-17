@@ -195,6 +195,7 @@ Blockly.DropDownDiv.showPositionedByBlock = function(owner, block,
   // If we can't fit it, render above the entire parent block.
   var secondaryX = primaryX;
   var secondaryY = position.top;
+
   if (opt_secondaryYOffset) {
     secondaryY += opt_secondaryYOffset;
   }
@@ -224,6 +225,7 @@ Blockly.DropDownDiv.show = function(owner, primaryX, primaryY, secondaryX, secon
   Blockly.DropDownDiv.onHide_ = opt_onHide;
   var div = Blockly.DropDownDiv.DIV_;
   var metrics = Blockly.DropDownDiv.getPositionMetrics(primaryX, primaryY, secondaryX, secondaryY);
+
   // Update arrow CSS
   Blockly.DropDownDiv.arrow_.style.transform = 'translate(' +
     metrics.arrowX + 'px,' + metrics.arrowY + 'px) rotate(45deg)';
@@ -330,6 +332,7 @@ Blockly.DropDownDiv.getPositionMetrics = function(primaryX, primaryY, secondaryX
     initialY = secondaryY - divSize.height; // No padding on Y
   } else {
     initialY = primaryY; // No padding on Y
+
   }
 
   return {

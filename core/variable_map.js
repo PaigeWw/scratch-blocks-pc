@@ -155,7 +155,9 @@ Blockly.VariableMap.prototype.createVariable = function(name, opt_type, opt_id) 
 Blockly.VariableMap.prototype.deleteVariable = function(variable) {
   var variableList = this.variableMap_[variable.type];
   for (var i = 0, tempVar; tempVar = variableList[i]; i++) {
+
     if (tempVar.getId() == variable.getId()) {
+      console.log('Blockly.VariableMap.prototype.deleteVariable 刪除了')
       variableList.splice(i, 1);
       Blockly.Events.fire(new Blockly.Events.VarDelete(variable));
       return;

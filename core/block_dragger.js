@@ -273,10 +273,15 @@ Blockly.BlockDragger.prototype.updateCursorDuringBlockDrag_ = function() {
   var trashcan = this.workspace_.trashcan;
   if (this.wouldDeleteBlock_) {
     this.draggingBlock_.setDeleteStyle(true);
+    Blockly.utils.addClass(/** @type {!Element} */ (this.workspace_.toolbox_.trash),
+      'mxcTrashOpen');
     if (this.deleteArea_ == Blockly.DELETE_AREA_TRASH && trashcan) {
       trashcan.setOpen_(true);
+
     }
   } else {
+    Blockly.utils.removeClass(/** @type {!Element} */ (this.workspace_.toolbox_.trash),
+      'mxcTrashOpen');
     this.draggingBlock_.setDeleteStyle(false);
     if (trashcan) {
       trashcan.setOpen_(false);

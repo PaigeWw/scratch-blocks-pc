@@ -26,53 +26,53 @@ Blockly.Colours = {
   // SVG colours: these must be specificed in #RRGGBB style
   // To add an opacity, this must be specified as a separate property (for SVG fill-opacity)
   "motion": {
-    "primary": "#4C97FF",
-    "secondary": "#4280D7",
-    "tertiary": "#3373CC",
+    "primary": "#62d669",
+    "secondary": "#45af4b",
+    "tertiary": "#329838",
     "bg0": "url(../media/mxc-icon/motion_0.png)",
     "bg1": "url(../media/mxc-icon/motion_1.png)"
   },
   "looks": {
-    "primary": "#9966FF",
-    "secondary": "#855CD6",
-    "tertiary": "#774DCB",
+    "primary": "#21c0fa",
+    "secondary": "#1b99c7",
+    "tertiary": "#0785b3",
     "bg0": "url(../media/mxc-icon/looks_0.png)",
     "bg1": "url(../media/mxc-icon/looks_1.png)"
   },
   "sounds": {
-    "primary": "#CF63CF",
-    "secondary": "#C94FC9",
-    "tertiary": "#BD42BD",
+    "primary": "#ab77e2",
+    "secondary": "#884dc7",
+    "tertiary": "#7b3fbb",
   },
   "control": {
-    "primary": "#FFAB19",
-    "secondary": "#EC9C13",
-    "tertiary": "#CF8B17"
+    "primary": "#5ca3fb",
+    "secondary": "#4280d7",
+    "tertiary": "#2d6bc1"
   },
   "event": {
-    "primary": "#FFBF00",
-    "secondary": "#E6AC00",
-    "tertiary": "#CC9900"
+    "primary": "#00ceb8",
+    "secondary": "#059d8d",
+    "tertiary": "#038c7d"
   },
   "sensing": {
-    "primary": "#5CB1D6",
-    "secondary": "#47A8D1",
-    "tertiary": "#2E8EB8"
+    "primary": "#db70c7",
+    "secondary": "#ad4b9b",
+    "tertiary": "#923481"
   },
   "pen": {
-    "primary": "#0fBD8C",
-    "secondary": "#0DA57A",
-    "tertiary": "#0B8E69"
+    "primary": "#fd7d70",
+    "secondary": "#dd5e51",
+    "tertiary": "#d35447"
   },
   "operators": {
-    "primary": "#59C059",
-    "secondary": "#46B946",
-    "tertiary": "#389438"
+    "primary": "#fbb13b",
+    "secondary": "#d49127",
+    "tertiary": "#bd7c13"
   },
   "data": {
-    "primary": "#FF8C1A",
-    "secondary": "#FF8000",
-    "tertiary": "#DB6E00"
+    "primary": "#fb713b",
+    "secondary": "#df5d2a",
+    "tertiary": "#c54614"
   },
   "more": {
     "primary": "#FF6680",
@@ -101,9 +101,10 @@ Blockly.Colours = {
   // CSS colours: support RGBA
   "fieldShadow": "rgba(0,0,0,0.1)",
   "dropDownShadow": "rgba(0, 0, 0, .3)",
-  "numPadBackground": "#547AB2",
-  "numPadBorder": "#435F91",
-  "numPadActiveBackground": "#435F91",
+  "numPadBackground": "#FFFFFF",
+  "numPadButtonBackground": "#d2bdfd",
+  "numPadBorder": "#9c77e6",
+  "numPadActiveBackground": "#9c77e6",
   "numPadText": "#FFFFFF",
   "valueReportBackground": "#FFFFFF",
   "valueReportBorder": "#AAAAAA"

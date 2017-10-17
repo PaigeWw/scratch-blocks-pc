@@ -73,6 +73,12 @@ Blockly.BlockSvg.MIN_BLOCK_X_SHADOW_OUTPUT = 10 * Blockly.BlockSvg.GRID_UNIT;
 Blockly.BlockSvg.MIN_BLOCK_Y = 12 * Blockly.BlockSvg.GRID_UNIT;
 
 /**
+ * y-offset of the top of the field shadow block from the bottom of the block.
+ * @const
+ */
+Blockly.BlockSvg.FIELD_Y_OFFSET = -10 * Blockly.BlockSvg.GRID_UNIT;
+
+/**
  * Height of extra row after a statement input.
  * @const
  */
