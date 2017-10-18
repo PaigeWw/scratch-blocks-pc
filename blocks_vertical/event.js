@@ -181,7 +181,7 @@ Blockly.Blocks['event_broadcast_menu'] = {
             "options": [
               ['消息1', 'message1'],
               ['消息2', 'message2'],
-              // ['new message', 'new message']
+              [ '新建消息', 'msg_create']
             ]
           }
         ],

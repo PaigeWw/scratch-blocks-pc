@@ -133,7 +133,8 @@ Blockly.Css.CONTENT = [
     'overflow: hidden;',  /* IE overflows by default. */
     'position: absolute;',
     'display: block;',
-    'background-image: url(./static/blocks-media/mxc-icon/bg_blocks_edit.png);',
+    'background-image: url(./static/blocks-media/mxc-icon/bg_blocks_edit.svg);',
+    'background-position: 240px',
   '}',
 
   /* Necessary to position the drag surface */
