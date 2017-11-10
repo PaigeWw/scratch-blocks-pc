@@ -29,7 +29,7 @@ goog.require('Blockly.Blocks');
  */
 
 Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: none">'+
-  '<category name="动作" colour="#4C97FF" secondaryColour="#3373CC" bg="url(./static/blocks-media/mxc-icon/bg_motion_0.png)" bgSelected="url(./static/blocks-media/mxc-icon/bg_motion_1.png)">'+
+  '<category name="动作" colour="#62d669" secondaryColour="#45af4b" bg="url(./static/blocks-media/mxc-icon/bg_motion_0.png)" bgSelected="url(./static/blocks-media/mxc-icon/bg_motion_1.png)">'+
   '<block type="motion_movesteps" id="motion_movesteps">'+
   '<value name="STEPS">'+
   '<shadow type="math_number">'+
@@ -133,7 +133,7 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
   '<block type="motion_yposition" id="motion_yposition"></block>'+
   '<block type="motion_direction" id="motion_direction"></block>'+
   '</category>'+
-  '<category name="事件" bg="url(./static/blocks-media/mxc-icon/bg_event_0.png)" bgSelected="url(./static/blocks-media/mxc-icon/bg_event_1.png)" colour="#FFD500" secondaryColour="#CC9900">'+
+  '<category name="事件" bg="url(./static/blocks-media/mxc-icon/bg_event_0.png)" bgSelected="url(./static/blocks-media/mxc-icon/bg_event_1.png)" colour="#00ceb8" secondaryColour="#059d8d">'+
       '<block type="event_whenflagclicked" id="event_whenflagclicked"></block>'+
       '<block type="event_whenkeypressed" id="event_whenkeypressed">'+
       '</block>'+
@@ -166,7 +166,7 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
             '</value>'+
       '</block>'+
   '</category>'+
-  '<category bg="url(./static/blocks-media/mxc-icon/bg_looks_0.png)" bgSelected="url(./static/blocks-media/mxc-icon/bg_looks_1.png)" name="外观" colour="#9966FF" secondaryColour="#774DCB">'+
+  '<category bg="url(./static/blocks-media/mxc-icon/bg_looks_0.png)" bgSelected="url(./static/blocks-media/mxc-icon/bg_looks_1.png)" name="外观" colour="#21c0fa" secondaryColour="#1b99c7">'+
   '<block type="looks_show" id="looks_show"></block>'+
   '<block type="looks_hide" id="looks_hide"></block>'+
   '<block type="looks_switchcostumeto" id="looks_switchcostumeto">'+
@@ -228,7 +228,7 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
   '<block type="looks_backdropname" id="looks_backdropname"></block>'+
   '<block type="looks_size" id="looks_size"></block>'+
   '</category>'+
-  '<category name="控制" bg="url(./static/blocks-media/mxc-icon/bg_control_0.png)" bgSelected="url(./static/blocks-media/mxc-icon/bg_control_1.png)" colour="#FFAB19" secondaryColour="#CF8B17">'+
+  '<category name="控制" bg="url(./static/blocks-media/mxc-icon/bg_control_0.png)" bgSelected="url(./static/blocks-media/mxc-icon/bg_control_1.png)" colour="#5ca3fb" secondaryColour="#4280d7">'+
       '<block type="control_wait" id="control_wait">'+
           '<value name="DURATION">'+
               '<shadow type="math_positive_number">'+
@@ -257,7 +257,7 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
       '</block>'+
       '<block type="control_delete_this_clone" id="control_delete_this_clone"></block>'+
   '</category>'+
-  '<category bg="url(./static/blocks-media/mxc-icon/bg_sound_0.png)" bgSelected="url(./static/blocks-media/mxc-icon/bg_sound_1.png)" name="声音" colour="#D65CD6" secondaryColour="#BD42BD">'+
+  '<category bg="url(./static/blocks-media/mxc-icon/bg_sound_0.png)" bgSelected="url(./static/blocks-media/mxc-icon/bg_sound_1.png)" name="声音" colour="#ab77e2" secondaryColour="#884dc7">'+
     '<block type="sound_play" id="sound_play">'+
       '<value name="SOUND_MENU">'+
         '<shadow type="sound_sounds_menu"></shadow>'+
@@ -335,61 +335,7 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
     '</block>'+
     '<block type="sound_tempo" id="sound_tempo"></block>'+
   '</category>'+
-  '<category bg="url(./static/blocks-media/mxc-icon/bg_pen_0.png)" bgSelected="url(./static/blocks-media/mxc-icon/bg_pen_1.png)" name="画笔" colour="#00B295" secondaryColour="#0B8E69">'+
-    '<block type="pen_clear" id="pen_clear"></block>'+
-    '<block type="pen_stamp" id="pen_stamp"></block>'+
-    '<block type="pen_pendown" id="pen_pendown"></block>'+
-    '<block type="pen_penup" id="pen_penup"></block>'+
-    '<block type="pen_setpencolortocolor" id="pen_setpencolortocolor">'+
-      '<value name="COLOR">'+
-        '<shadow type="colour_picker">'+
-        '</shadow>'+
-      '</value>'+
-    '</block>'+
-    '<block type="pen_changepencolorby" id="pen_changepencolorby">'+
-      '<value name="COLOR">'+
-        '<shadow type="math_number">'+
-          '<field name="NUM">10</field>'+
-        '</shadow>'+
-      '</value>'+
-    '</block>'+
-    '<block type="pen_setpencolortonum" id="pen_setpencolortonum">'+
-      '<value name="COLOR">'+
-        '<shadow type="math_number">'+
-          '<field name="NUM">0</field>'+
-        '</shadow>'+
-      '</value>'+
-    '</block>'+
-    '<block type="pen_changepenshadeby" id="pen_changepenshadeby">'+
-      '<value name="SHADE">'+
-        '<shadow type="math_number">'+
-          '<field name="NUM">10</field>'+
-        '</shadow>'+
-      '</value>'+
-    '</block>'+
-    '<block type="pen_setpenshadeto" id="pen_setpenshadeto">'+
-      '<value name="SHADE">'+
-        '<shadow type="math_number">'+
-          '<field name="NUM">50</field>'+
-        '</shadow>'+
-      '</value>'+
-    '</block>'+
-    '<block type="pen_changepensizeby" id="pen_changepensizeby">'+
-      '<value name="SIZE">'+
-        '<shadow type="math_number">'+
-          '<field name="NUM">1</field>'+
-        '</shadow>'+
-      '</value>'+
-    '</block>'+
-    '<block type="pen_setpensizeto" id="pen_setpensizeto">'+
-      '<value name="SIZE">'+
-        '<shadow type="math_number">'+
-          '<field name="NUM">1</field>'+
-        '</shadow>'+
-      '</value>'+
-    '</block>'+
-  '</category>'+
-  '<category name="侦测" colour="#4CBFE6" secondaryColour="#2E8EB8" bg="url(./static/blocks-media/mxc-icon/bg_sensing_0.png)" bgSelected="url(./static/blocks-media/mxc-icon/bg_sensing_1.png)">'+
+  '<category name="侦测" colour="#db70c7" secondaryColour="#ad4b9b" bg="url(./static/blocks-media/mxc-icon/bg_sensing_0.png)" bgSelected="url(./static/blocks-media/mxc-icon/bg_sensing_1.png)">'+
     '<block type="sensing_touchingobject" id="sensing_touchingobject">'+
       '<value name="TOUCHINGOBJECTMENU">'+
         '<shadow type="sensing_touchingobjectmenu"></shadow>'+
@@ -439,7 +385,61 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
   '</block>'+
   '<block type="sensing_dayssince2000" id="sensing_dayssince2000"></block>'+
   '</category>'+
-  '<category name="运算" colour="#40BF4A" secondaryColour="#389438" bg="url(./static/blocks-media/mxc-icon/bg_operators_0.png)" bgSelected="url(./static/blocks-media/mxc-icon/bg_operators_1.png)">>'+
+  '<category bg="url(./static/blocks-media/mxc-icon/bg_pen_0.png)" bgSelected="url(./static/blocks-media/mxc-icon/bg_pen_1.png)" name="画笔" colour="#fd7d70" secondaryColour="#dd5e51">'+
+  '<block type="pen_clear" id="pen_clear"></block>'+
+  '<block type="pen_stamp" id="pen_stamp"></block>'+
+  '<block type="pen_pendown" id="pen_pendown"></block>'+
+  '<block type="pen_penup" id="pen_penup"></block>'+
+  '<block type="pen_setpencolortocolor" id="pen_setpencolortocolor">'+
+  '<value name="COLOR">'+
+  '<shadow type="colour_picker">'+
+  '</shadow>'+
+  '</value>'+
+  '</block>'+
+  '<block type="pen_changepencolorby" id="pen_changepencolorby">'+
+  '<value name="COLOR">'+
+  '<shadow type="math_number">'+
+  '<field name="NUM">10</field>'+
+  '</shadow>'+
+  '</value>'+
+  '</block>'+
+  '<block type="pen_setpencolortonum" id="pen_setpencolortonum">'+
+  '<value name="COLOR">'+
+  '<shadow type="math_number">'+
+  '<field name="NUM">0</field>'+
+  '</shadow>'+
+  '</value>'+
+  '</block>'+
+  '<block type="pen_changepenshadeby" id="pen_changepenshadeby">'+
+  '<value name="SHADE">'+
+  '<shadow type="math_number">'+
+  '<field name="NUM">10</field>'+
+  '</shadow>'+
+  '</value>'+
+  '</block>'+
+  '<block type="pen_setpenshadeto" id="pen_setpenshadeto">'+
+  '<value name="SHADE">'+
+  '<shadow type="math_number">'+
+  '<field name="NUM">50</field>'+
+  '</shadow>'+
+  '</value>'+
+  '</block>'+
+  '<block type="pen_changepensizeby" id="pen_changepensizeby">'+
+  '<value name="SIZE">'+
+  '<shadow type="math_number">'+
+  '<field name="NUM">1</field>'+
+  '</shadow>'+
+  '</value>'+
+  '</block>'+
+  '<block type="pen_setpensizeto" id="pen_setpensizeto">'+
+  '<value name="SIZE">'+
+  '<shadow type="math_number">'+
+  '<field name="NUM">1</field>'+
+  '</shadow>'+
+  '</value>'+
+  '</block>'+
+  '</category>'+
+  '<category name="运算" colour="#fbb13b" secondaryColour="#d49127" bg="url(./static/blocks-media/mxc-icon/bg_operators_0.png)" bgSelected="url(./static/blocks-media/mxc-icon/bg_operators_1.png)">>'+
     '<block type="operator_add" id="operator_add">'+
       '<value name="NUM1">'+
         '<shadow type="math_number">'+
@@ -597,6 +597,6 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
       '</value>'+
     '</block>'+
   '</category>'+
-  '<category bg="url(./static/blocks-media/mxc-icon/bg_data_0.png)" bgSelected="url(./static/blocks-media/mxc-icon/bg_data_1.png)" name="数据" colour="#FF8C1A" secondaryColour="#DB6E00" custom="VARIABLE">' +
+  '<category bg="url(./static/blocks-media/mxc-icon/bg_data_0.png)" bgSelected="url(./static/blocks-media/mxc-icon/bg_data_1.png)" name="数据" colour="#fb713b" secondaryColour="#df5d2a" custom="VARIABLE">' +
   '</category>' +
   '</xml>';

@@ -58,7 +58,7 @@ Blockly.Blocks['data_setvariableto'] = {
    */
   init: function() {
     this.jsonInit({
-      "message0": "set %1 to %2",
+      "message0": "设置 %1 为 %2",
       "args0": [
         {
           "type": "field_variable",
@@ -82,7 +82,7 @@ Blockly.Blocks['data_changevariableby'] = {
    */
   init: function() {
     this.jsonInit({
-      "message0": "change %1 by %2",
+      "message0": "将 %1 增加 %2",
       "args0": [
         {
           "type": "field_variable",

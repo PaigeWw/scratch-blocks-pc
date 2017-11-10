@@ -577,8 +577,8 @@ Blockly.Css.CONTENT = [
   '}',
 
   '.blocklyFlyoutBackground {',
-    'fill: #a7d0fe;',
-    'fill-opacity: .2;',
+    'fill: #ffffff;',
+    'fill-opacity: .7;',
   '}',
 
   '.blocklyMainWorkspaceScrollbar {',
@@ -604,9 +604,9 @@ Blockly.Css.CONTENT = [
 
   '.blocklyScrollbarBackground:hover+.blocklyScrollbarHandle,',
   '.blocklyScrollbarHandle:hover {',
-    'fill: $colour_scrollbarHover;',
-    'stroke: #87bfff;',
-    'stroke-width: 4;',
+    'fill: $colour_scrollbar;',
+    'stroke: $colour_scrollbar;',
+    'stroke-width: 10;',
   '}',
 
   '.blocklyZoom>image {',
@@ -696,8 +696,8 @@ Blockly.Css.CONTENT = [
     'font-family: "Helvetica Neue", Helvetica, sans-serif;',
     'z-index: 40;', /* so blocks go over toolbox when dragging */
     'border-radius: 8px;',
-    'border: solid 2px #75b4fa;',
     'box-sizing: border-box;',
+    'border: solid 6px #ffffff;',
   '}',
 
   '.blocklyTreeRoot {',
@@ -1116,7 +1116,8 @@ Blockly.Css.CONTENT = [
   '}',
 
   '.scratchCategoryMenu {',
-    // 'width: 220px;',
+   'box-sizing: border-box;',
+   'width: 244px;',
    'height: calc(100% - 46px);',
    'padding: 0 13px 0 13px;',
     'margin: auto;',
@@ -1141,7 +1142,7 @@ Blockly.Css.CONTENT = [
   '.scratchCategoryMenuRow {',
       'height: 60px;',
       'line-height: 60px;',
-      'width: 220px;',
+      'width: 218px;',
       'margin-top: 10px;',
   '}',
 

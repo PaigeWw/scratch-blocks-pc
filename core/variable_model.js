@@ -75,7 +75,7 @@ Blockly.VariableModel = function(workspace, name, opt_type, opt_id) {
    * @type {string}
    * @private
    */
-  this.id_ = opt_id || Blockly.utils.genUid();
+  this.id_ = name || Blockly.utils.genUid();
 
   Blockly.Events.fire(new Blockly.Events.VarCreate(this));
 };

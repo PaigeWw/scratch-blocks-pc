@@ -114,15 +114,15 @@ Blockly.Msg.REDO = '重做';
 /// prompt - This message is only seen in the Opera browser.  With most browsers, users can edit numeric values in blocks by just clicking and typing.  Opera does not allows this, so we have to open a new window and prompt users with this message to chanage a value.
 Blockly.Msg.CHANGE_VALUE_TITLE = 'Change value:';
 /// dropdown choice - When the user clicks on a variable block, this is one of the dropdown menu choices.  It is used to rename the current variable.  See [https://github.com/google/blockly/wiki/Variables#dropdown-menu https://github.com/google/blockly/wiki/Variables#dropdown-menu].
-Blockly.Msg.RENAME_VARIABLE = 'Rename variable...';
+Blockly.Msg.RENAME_VARIABLE = '重命名变量...';
 /// prompt - Prompts the user to enter the new name for the selected variable.  See [https://github.com/google/blockly/wiki/Variables#dropdown-menu https://github.com/google/blockly/wiki/Variables#dropdown-menu].\n\nParameters:\n* %1 - the name of the variable to be renamed.
-Blockly.Msg.RENAME_VARIABLE_TITLE = 'Rename all "%1" variables to:';
+Blockly.Msg.RENAME_VARIABLE_TITLE = '为 "%1" 重命名:';
 
 // Variable creation
 /// button text - Text on the button used to launch the variable creation dialogue.
 Blockly.Msg.NEW_VARIABLE = '新建变量...';
 /// prompt - Prompts the user to enter the name for a new variable.  See [https://github.com/google/blockly/wiki/Variables#dropdown-menu https://github.com/google/blockly/wiki/Variables#dropdown-menu].
-Blockly.Msg.NEW_VARIABLE_TITLE = 'New variable name:';
+Blockly.Msg.NEW_VARIABLE_TITLE = '输入新建变量名:';
 /// alert - Tells the user that the name they entered is already in use.
 Blockly.Msg.VARIABLE_ALREADY_EXISTS = '变量 "%1" 已存在.'
 /// alert - Tells the user that the name they entered is already in use for a procedure.
@@ -130,7 +130,7 @@ Blockly.Msg.PROCEDURE_ALREADY_EXISTS = 'A procedure named "%1" already exists.'
 
 // Variable deletion.
 /// confirm -  Ask the user to confirm their deletion of multiple uses of a variable.
-Blockly.Msg.DELETE_VARIABLE_CONFIRMATION = 'Delete %1 uses of the "%2" variable?';
+Blockly.Msg.DELETE_VARIABLE_CONFIRMATION = '将删除 %1 个与变量 "%2" 相关的积木?';
 /// alert - Tell the user that they can't delete a variable because it's part of the definition of a function.
 Blockly.Msg.CANNOT_DELETE_VARIABLE_PROCEDURE = 'Can\'t delete the variable "%1" because it\'s part of the definition of the function "%2"';
 /// dropdown choice - Delete the currently selected variable.

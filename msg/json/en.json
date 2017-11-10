@@ -1,7 +1,7 @@
 {
 	"@metadata": {
 		"author": "Ellen Spertus <ellen.spertus@gmail.com>",
-		"lastupdated": "2017-08-07 09:20:40.637000",
+		"lastupdated": "2017-10-19 09:33:31.900000",
 		"locale": "en",
 		"messagedocumentation" : "qqq"
 	},
@@ -26,13 +26,13 @@
 	"UNDO": "撤销",
 	"REDO": "重做",
 	"CHANGE_VALUE_TITLE": "Change value:",
-	"RENAME_VARIABLE": "Rename variable...",
-	"RENAME_VARIABLE_TITLE": "Rename all '%1' variables to:",
+	"RENAME_VARIABLE": "重命名变量...",
+	"RENAME_VARIABLE_TITLE": "为 '%1' 重命名:",
 	"NEW_VARIABLE": "新建变量...",
-	"NEW_VARIABLE_TITLE": "New variable name:",
+	"NEW_VARIABLE_TITLE": "输入新建变量名:",
 	"VARIABLE_ALREADY_EXISTS": "变量 '%1' 已存在.",
 	"PROCEDURE_ALREADY_EXISTS": "A procedure named '%1' already exists.",
-	"DELETE_VARIABLE_CONFIRMATION": "Delete %1 uses of the '%2' variable?",
+	"DELETE_VARIABLE_CONFIRMATION": "将删除 %1 个与变量 '%2' 相关的积木?",
 	"CANNOT_DELETE_VARIABLE_PROCEDURE": "Can't delete the variable '%1' because it's part of the definition of the function '%2'",
 	"DELETE_VARIABLE": "删除变量 '%1'",
 	"COLOUR_PICKER_HELPURL": "https://en.wikipedia.org/wiki/Color",

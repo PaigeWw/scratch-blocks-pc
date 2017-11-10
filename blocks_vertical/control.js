@@ -183,7 +183,7 @@ Blockly.Blocks['control_stop'] = {
           this.sourceBlock_.nextConnection &&
           this.sourceBlock_.nextConnection.isConnected()) {
         return [
-          ['other scripts in sprite', OTHER_SCRIPTS]
+          ['角色的其他脚本', OTHER_SCRIPTS]
         ];
       }
       return [['全部脚本', ALL_SCRIPTS],

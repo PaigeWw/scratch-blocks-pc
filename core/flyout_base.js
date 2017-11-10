@@ -460,13 +460,17 @@ Blockly.Flyout.prototype.show = function(xmlList) {
   // Create the blocks to be shown in this flyout.
   var contents = [];
   var gaps = [];
+  var width = 200;
+
   this.permanentlyDisabled_.length = 0;
+
   for (var i = 0, xml; xml = xmlList[i]; i++) {
     if (xml.tagName) {
       var tagName = xml.tagName.toUpperCase();
       var default_gap = this.horizontalLayout_ ? this.GAP_X : this.GAP_Y;
       if (tagName == 'BLOCK') {
         var curBlock = Blockly.Xml.domToBlock(xml, this.workspace_);
+        width = curBlock.width>width?curBlock.width:width;
         if (curBlock.disabled) {
           // Record blocks that were initially disabled.
           // Do not enable these blocks as a result of capacity filtering.
@@ -494,6 +498,8 @@ Blockly.Flyout.prototype.show = function(xmlList) {
         var isLabel = tagName == 'LABEL';
         var curButton = new Blockly.FlyoutButton(this.workspace_,
             this.targetWorkspace_, xml, isLabel);
+        console.log('curButton',curButton);
+        width = curButton.width>width?curButton.width:width;
         contents.push({type: 'button', button: curButton});
         gaps.push(default_gap);
       }
@@ -518,7 +524,7 @@ Blockly.Flyout.prototype.show = function(xmlList) {
   this.reflow();
 
   // Correctly position the flyout's scrollbar when it opens.
-  this.position();
+  this.position(width);
 
   this.reflowWrapper_ = this.reflow.bind(this);
   this.workspace_.addChangeListener(this.reflowWrapper_);

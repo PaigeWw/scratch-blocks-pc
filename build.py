@@ -285,7 +285,7 @@ class Gen_compressed(threading.Thread):
     # Send the request to Google.
     headers = {"Content-type": "application/x-www-form-urlencoded"}
     data = urllib.urlencode(params)
-    req = urllib2.Request("http://www.closure-compiler.appspot.com/compile", data)
+    req = urllib2.Request("https://closure-compiler.appspot.com/compile", data)
     response = urllib2.urlopen(req)
     #response = conn.getresponse()
     json_str = response.read()

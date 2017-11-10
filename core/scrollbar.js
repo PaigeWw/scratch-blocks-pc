@@ -210,11 +210,11 @@ Blockly.Scrollbar = function(workspace, horizontal, opt_pair, opt_class) {
     // this.svgHandle_.setAttribute('height',
     //     Blockly.Scrollbar.scrollbarThickness - 5);
     this.svgBackground_.setAttribute('height',
-      0);
+      11);
     this.outerSvg_.setAttribute('height',
-      0);
+      11);
     this.svgHandle_.setAttribute('height',
-      0);
+      6);
     this.svgHandle_.setAttribute('y', 2.5);
 
     this.lengthAttribute_ = 'width';
@@ -227,12 +227,12 @@ Blockly.Scrollbar = function(workspace, horizontal, opt_pair, opt_class) {
     // this.svgHandle_.setAttribute('width',
     //   Blockly.Scrollbar.scrollbarThickness - 5);
     this.svgBackground_.setAttribute('width',
-      0);
+      11);
     this.outerSvg_.setAttribute('width',
-      0);
+      11);
     this.svgHandle_.setAttribute('width',
-      0);
-    this.svgHandle_.setAttribute('x', 2.5);
+      6);
+    this.svgHandle_.setAttribute('x', 4);
 
     this.lengthAttribute_ = 'height';
     this.positionAttribute_ = 'y';
@@ -484,7 +484,7 @@ Blockly.Scrollbar.prototype.resizeViewHorizontal = function(hostMetrics) {
   }
   this.setScrollViewSize_(Math.max(0, viewSize));
 
-  var xCoordinate = hostMetrics.absoluteLeft + 0.5;
+  var xCoordinate = hostMetrics.absoluteLeft + 4;
   if (this.pair_ && this.workspace_.RTL) {
     xCoordinate += Blockly.Scrollbar.scrollbarThickness;
   }
@@ -553,7 +553,7 @@ Blockly.Scrollbar.prototype.resizeViewVertical = function(hostMetrics) {
   }
   this.setScrollViewSize_(Math.max(0, viewSize));
 
-  var xCoordinate = hostMetrics.absoluteLeft + 0.5;
+  var xCoordinate = hostMetrics.absoluteLeft + 4;
   if (!this.workspace_.RTL) {
     xCoordinate += hostMetrics.viewWidth -
         Blockly.Scrollbar.scrollbarThickness - 1;

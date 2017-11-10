@@ -78,7 +78,7 @@ Blockly.VerticalFlyout.prototype.autoClose = false;
  * The width of the flyout, if not otherwise specified.
  * @type {number}
  */
-Blockly.VerticalFlyout.prototype.DEFAULT_WIDTH = 300;
+Blockly.VerticalFlyout.prototype.DEFAULT_WIDTH = 360;
 
 /**
  * Size of a checkbox next to a variable reporter.
@@ -244,7 +244,7 @@ Blockly.VerticalFlyout.prototype.setMetrics_ = function(xyRatio) {
 /**
  * Move the flyout to the edge of the workspace.
  */
-Blockly.VerticalFlyout.prototype.position = function() {
+Blockly.VerticalFlyout.prototype.position = function(width) {
   if (!this.isVisible()) {
     return;
   }
@@ -256,7 +256,12 @@ Blockly.VerticalFlyout.prototype.position = function() {
 
   // This version of the flyout does not change width to fit its contents.
   // Instead it matches the width of its parent or uses a default value.
-  this.width_ = this.getWidth();
+  // this.width_ = this.getWidth();
+  // this.width_ = 'auto';
+  if(width){
+    this.width_ = width + 30;
+  }
+
 
   if (this.parentToolbox_) {
     var x = this.parentToolbox_.HtmlDiv.offsetWidth;
@@ -267,6 +272,7 @@ Blockly.VerticalFlyout.prototype.position = function() {
     var y = 0;
   }
 
+  // console.log('--------width--------',this.width_);
   // Record the height for Blockly.Flyout.getMetrics_
   this.height_ = targetWorkspaceMetrics.viewHeight - y;
 
@@ -280,7 +286,7 @@ Blockly.VerticalFlyout.prototype.position = function() {
   // Update the scrollbar (if one exists).
   if (this.scrollbar_) {
     // Set the scrollbars origin to be the top left of the flyout.
-    this.scrollbar_.setOrigin(x, y);
+    this.scrollbar_.setOrigin(this.width_- 108 , y);
     this.scrollbar_.resize();
   }
   // The blocks need to be visible in order to be laid out and measured
@@ -503,11 +509,11 @@ Blockly.VerticalFlyout.prototype.createRect_ = function(block, x, y,
  */
 Blockly.VerticalFlyout.prototype.createCheckbox_ = function(block, cursorX,
      cursorY, blockHW) {
-  console.log('createCheckbox_');
   var checkboxState = Blockly.VerticalFlyout.getCheckboxState(block.id);
   var svgRoot = block.getSvgRoot();
   var extraSpace = this.CHECKBOX_SIZE + this.CHECKBOX_MARGIN;
   var width = this.RTL ? this.getWidth() / this.workspace_.scale - extraSpace : cursorX;
+
   var height = cursorY + blockHW.height / 2 - this.CHECKBOX_SIZE / 2;
   var checkboxGroup = Blockly.utils.createSvgElement('g',
     {
